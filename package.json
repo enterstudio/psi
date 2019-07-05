@@ -14,7 +14,9 @@
   "repository": "addyosmani/psi",
   "license": "Apache-2.0",
   "scripts": {
-    "test": "xo && mocha"
+    "test": "xo && mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "cli.js",
@@ -45,7 +47,8 @@
     "pretty-bytes": "^3.0.1",
     "repeating": "^2.0.0",
     "sort-on": "^1.2.2",
-    "update-notifier": "^0.6.0"
+    "update-notifier": "^0.6.0",
+    "snyk": "^1.192.0"
   },
   "devDependencies": {
     "mocha": "^2.3.3",
@@ -53,5 +56,6 @@
   },
   "xo": {
     "space": true
-  }
+  },
+  "snyk": true
 }
